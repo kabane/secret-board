@@ -10,6 +10,7 @@ html(lang="ja")
     form(method="post" action="/posts")
       div
         textarea(name="content" cols=40 rows=4)
+        input(type="hidden" name="oneTimeToken" value=oneTimeToken)
       div
         button(type="submit") 投稿
       h2 投稿一覧
