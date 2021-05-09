@@ -27,4 +27,8 @@ html(lang="ja")
         form(method="post" action="/posts?delete=1")
           input(type="hidden" name="id" value=post.id)
           button(type="submit") 削除
+      if (user !== 'admin')
+        form(method="post" action="/badReports")
+          input(type="hidden" name="postId" value=post.id)
+          button(type="submit") 違反報告
       hr

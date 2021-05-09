@@ -1,0 +1,14 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    title 秘密の匿名掲示板
+  body
+    h1 秘密の匿名掲示板
+    a(href="/logout") ログアウト
+    h2 違反報告一覧
+    if user === 'admin'
+      each badReport in badReports 
+        p #{badReport.reportedBy}から投稿「#{badReport.Post.content}」への違反報告がありました。
+    else
+      p 閲覧権限がありません。
